@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <title>Web API Client Server Scooping</title>
+  </head>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a href="#" class="navbar-brand">Web API Client Server Scooping</a>
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target="#navbar-main"></button>
+        </div>
+        <div class="navbar-collapse collapse" id="navbar-main">
+          <ul class="nav navbar-nav">
+            <li>
+              <a href="index.html">Change Heading</a>
+            </li>
+            <li>
+              <a href="url.html?title=makan makan di hacktiv8 enak">Get Url Parameter</a>
+            </li>
+            <li>
+              <a href="meal.html">Get Meals</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="page-header" id="banner">
+        <div class="row">
+          <h1 id="hi" data-heading="john doe">hello world</h1>
+        </div>
+
+        <div class="row">
+            <button id="change" class="btn btn-info">click me!</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="javascript/script.js"></script>
+    <script type="text/javascript">
+      $('#change').click(function () {
+        $('#hi')[0].innerHTML = $('#hi')[0].dataset.heading
+      })
+    </script>
+  </body>
+</html>
